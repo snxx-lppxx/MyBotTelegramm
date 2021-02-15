@@ -3,6 +3,8 @@ import DataParser
 
 from dh import DatabaseHandler
 
+bot = telebot.Telebot('TOKEN')
+
 def main():
     # initialization
     db = DatabaseHandler()
