@@ -1,11 +1,9 @@
 import telebot
 import DataParser
-from DatabaseHandler import DatabaseHandler
 
+from dh import DatabaseHandler
 
-bot = telebot.TeleBot("TOKEN")
-
-def logic():
+def main():
     # initialization
     db = DatabaseHandler()
     db.fill_database(DataParser.fetch_data())
@@ -21,7 +19,7 @@ def handle_message(check_book_name):
     check_book_name = input("Введите название произведения: ")
     pass
     # check exist in db
-    #write it by your own self
+    # write it by your own self
 
     # review  these before coding
     if (check_book_name == book_names):
@@ -30,7 +28,6 @@ def handle_message(check_book_name):
 # code for mistake occassion
    # else:
         handle_message("Произведение, которое ты ввел, не существует в нашей базе данных")
-
 
 
     # do stuff
@@ -43,4 +40,4 @@ def handle_message(message):
 
 
 if __name__ == "__main__":
-    logic()
+    main()
