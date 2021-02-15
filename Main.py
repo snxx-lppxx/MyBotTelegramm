@@ -1,9 +1,10 @@
 import telebot
 import DataParser
 
+from config import token
 from dh import DatabaseHandler
 
-bot = telebot.Telebot('TOKEN')
+bot = telebot.Telebot(token)
 
 def main():
     # initialization
